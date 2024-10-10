@@ -5,7 +5,7 @@ import useDashboardData from "./hooks/useDashboardData";
 
 const DashboardPage = () => {
   // Hooks
-  const { userData, isLoading, error, refreshData } = useDashboardData;
+  const { userData, isLoading, error, refreshData } = useDashboardData();
 
   return (
     <div>
