@@ -51,6 +51,10 @@
   height: 36px;
   align-items: center;
 
+  label {
+    margin-right: $large;
+  }
+
   @include small-only {
     margin-top: 8px;
   }

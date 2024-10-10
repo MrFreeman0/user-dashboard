@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useId, useMemo } from "react";
 import {
   ISortState,
   TSortBy,
@@ -18,6 +18,10 @@ const DashboardHeader = (props: IProps) => {
   // Destructure
   const { sortState, onQueryChange, onSortSelectionChange, onSortByChange } =
     props;
+
+  //Ids
+  const sortById = useId();
+  const sortWithId = useId();
 
   //Memoized handlers
   const handleQueryChange = useMemo(
@@ -49,6 +53,7 @@ const DashboardHeader = (props: IProps) => {
         onChange={handleQueryChange}
       />
       <div className="header-button-container">
+        <label htmlFor={sortWithId}>Sort By</label>
         <StyledSelect
           className="header-button"
           value={sortState.sortWith}
@@ -57,7 +62,12 @@ const DashboardHeader = (props: IProps) => {
           <option value={"name"}>Username</option>
           <option value={"email"}>Email</option>
         </StyledSelect>
-        <StyledSelect className="header-button" value={sortState.sortBy} onChange={handleSortByChange}>
+        <label htmlFor={sortById}>Sort With</label>
+        <StyledSelect
+          className="header-button"
+          value={sortState.sortBy}
+          onChange={handleSortByChange}
+        >
           <option value={"asc"}>Ascending</option>
           <option value={"desc"}>Descending</option>
         </StyledSelect>
