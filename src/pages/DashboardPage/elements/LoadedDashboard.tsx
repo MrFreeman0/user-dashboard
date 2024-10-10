@@ -1,5 +1,8 @@
 import INormalisedData from "../../../interfaces/INormsalisedData";
 import TNormalisedUsers from "../../../interfaces/TNormalisedUsers";
+import DashboardHeader from "../../../ui/DashboardHeader/DashboardHeader";
+import GridContainer from "../../../ui/GridContainer/GridContainer";
+import UserCard from "../../../ui/UserCard/UserCard";
 import useLoadedDashboard from "../hooks/useLoadedDashboard";
 
 interface IProps {
@@ -11,9 +14,24 @@ const LoadedDashboard = (props: IProps) => {
   const { userData } = props;
 
   //Hooks
-  const {} = useLoadedDashboard(userData);
+  const {
+    filteredAndSortedIds,
+    handleQueryChange,
+    handleSortSelectionChange,
+    handleSortByChange,
+    sortState,
+  } = useLoadedDashboard(userData);
 
-  return <div>LoadedDashboard</div>;
+  return (
+    <div>
+      <DashboardHeader />
+      <GridContainer>
+        {filteredAndSortedIds.map((id) => (
+          <UserCard key={id} user={userData.data[id]} />
+        ))}
+      </GridContainer>
+    </div>
+  );
 };
 
 export default LoadedDashboard;
