@@ -11,9 +11,21 @@ const ErrorDashboard = (props: IProps) => {
   const { handleRefresh, error } = props;
 
   return (
-    <div>
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: "16px",
+      }}
+    >
       <Placeholder title="Error" description={error ?? "Unknown Error"} />
-      {handleRefresh !== undefined && <StyledButton>Refresh</StyledButton>}
+      {handleRefresh !== undefined && (
+        <StyledButton style={{ marginTop: "16px", height: "36px" }} onClick={handleRefresh}>
+          Refresh
+        </StyledButton>
+      )}
     </div>
   );
 };

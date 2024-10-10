@@ -7,7 +7,7 @@ import IUser from "../../../interfaces/IUser";
 
 const useDashboardData = () => {
   // Hooks
-  const { data, error, isLoading, mutate } = useSWR("/users", axiosFetcher);
+  const { data, error, isLoading, isValidating, mutate, } = useSWR("/users", axiosFetcher);
 
   // State
   const [normalisedUsers, setNormalisedUsers] = useState<
@@ -43,7 +43,7 @@ const useDashboardData = () => {
 
   return {
     userData: normalisedUsers,
-    isLoading,
+    isLoading: isValidating || isLoading,
     error,
     refreshData,
   };
