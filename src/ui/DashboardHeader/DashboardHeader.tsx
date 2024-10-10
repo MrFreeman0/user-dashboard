@@ -42,7 +42,7 @@ const DashboardHeader = (props: IProps) => {
   );
 
   return (
-    <div>
+    <div className="flex-appbar-header">
       <StyledInput
         placeholder={"Search by name, email or address"}
         onChange={handleQueryChange}

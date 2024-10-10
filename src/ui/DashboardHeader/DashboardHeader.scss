@@ -1,0 +1,12 @@
+.flex-appbar-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: $background;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: $rounded-border;
+  margin-top: $extra-large;
+  box-shadow: $card-shadow;
+}
