@@ -1,7 +1,7 @@
 import React from "react";
 import "./StyledButton.scss";
 
-const StyledSelect: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (
+const StyledButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (
   props
 ) => {
   const { children, className, ...rest } = props;
@@ -13,4 +13,4 @@ const StyledSelect: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (
   );
 };
 
-export default StyledSelect;
+export default StyledButton;
