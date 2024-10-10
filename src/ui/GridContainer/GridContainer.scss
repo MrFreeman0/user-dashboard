@@ -1,0 +1,7 @@
+.grid-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: $extra-large;
+}

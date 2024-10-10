@@ -9,7 +9,11 @@ const UserCard = (props: IProps) => {
   // Destructure
   const { user } = props;
 
-  return <div>{user.name}</div>;
+  return (
+    <div className="user-card-item">
+      <div className="user-card-surface">{user.name}</div>
+    </div>
+  );
 };
 
 export default UserCard;

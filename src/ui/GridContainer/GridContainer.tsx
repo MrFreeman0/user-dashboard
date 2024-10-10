@@ -7,7 +7,7 @@ interface IProps {
 const GridContainer = (props: IProps) => {
   // Destructure
   const { children } = props;
-  return <div>{children}</div>;
+  return <div className="grid-flex-container">{children}</div>;
 };
 
 export default GridContainer;
