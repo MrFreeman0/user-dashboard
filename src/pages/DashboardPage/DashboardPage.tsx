@@ -14,7 +14,7 @@ const DashboardPage = () => {
       ) : (
         <>
           {error !== undefined ? (
-            <ErrorDashboard />
+            <ErrorDashboard handleRefresh={refreshData}/>
           ) : (
             <LoadedDashboard userData={userData} />
           )}
