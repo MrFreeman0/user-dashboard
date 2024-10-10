@@ -10,3 +10,11 @@
   margin-top: $extra-large;
   box-shadow: $card-shadow;
 }
+
+.header-button-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  height: 36px;
+  align-items: center;
+}

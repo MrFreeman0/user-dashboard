@@ -47,17 +47,19 @@ const DashboardHeader = (props: IProps) => {
         placeholder={"Search by name, email or address"}
         onChange={handleQueryChange}
       />
-      <StyledSelect
-        value={sortState.sortWith}
-        onChange={handleSortSelectionChange}
-      >
-        <option value={"name"}>Username</option>
-        <option value={"email"}>Email</option>
-      </StyledSelect>
-      <StyledSelect value={sortState.sortBy} onChange={handleSortByChange}>
-        <option value={"asc"}>Ascending</option>
-        <option value={"desc"}>Descending</option>
-      </StyledSelect>
+      <div className="header-button-container">
+        <StyledSelect
+          value={sortState.sortWith}
+          onChange={handleSortSelectionChange}
+        >
+          <option value={"name"}>Username</option>
+          <option value={"email"}>Email</option>
+        </StyledSelect>
+        <StyledSelect value={sortState.sortBy} onChange={handleSortByChange}>
+          <option value={"asc"}>Ascending</option>
+          <option value={"desc"}>Descending</option>
+        </StyledSelect>
+      </div>
     </div>
   );
 };
