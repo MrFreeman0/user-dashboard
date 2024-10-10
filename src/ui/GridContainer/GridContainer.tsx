@@ -1,7 +1,13 @@
 import "./GridContainer.scss";
 
-const GridContainer = () => {
-  return <div>GridContainer</div>;
+interface IProps {
+  children: React.ReactNode;
+}
+
+const GridContainer = (props: IProps) => {
+  // Destructure
+  const { children } = props;
+  return <div>{children}</div>;
 };
 
 export default GridContainer;
