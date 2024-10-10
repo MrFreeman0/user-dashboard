@@ -10,6 +10,10 @@
   margin-top: $extra-large;
   box-shadow: $card-shadow;
 }
+.header-input {
+  flex-grow: 1;
+  margin-right: $large;
+}
 
 .header-button-container {
   display: flex;
