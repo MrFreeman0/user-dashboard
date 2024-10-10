@@ -53,7 +53,7 @@ const DashboardHeader = (props: IProps) => {
         onChange={handleQueryChange}
       />
       <div className="header-button-container">
-        <label htmlFor={sortWithId}>Sort By</label>
+        <label htmlFor={sortWithId}>Sort With</label>
         <StyledSelect
           className="header-button"
           value={sortState.sortWith}
@@ -62,7 +62,7 @@ const DashboardHeader = (props: IProps) => {
           <option value={"name"}>Username</option>
           <option value={"email"}>Email</option>
         </StyledSelect>
-        <label htmlFor={sortById}>Sort With</label>
+        <label htmlFor={sortById}>Order</label>
         <StyledSelect
           className="header-button"
           value={sortState.sortBy}
