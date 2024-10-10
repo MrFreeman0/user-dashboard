@@ -14,7 +14,7 @@ const AuthenticatedPageWrapper = (props: IProps) => {
       <AppHeader>
         <h3 className="app-title">User Management Platform</h3>
       </AppHeader>
-      {children}
+      <div className="children-container">{children}</div>
     </div>
   );
 };
