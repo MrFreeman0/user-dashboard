@@ -1,8 +1,15 @@
+import INormalisedData from "../../../interfaces/INormsalisedData";
+import TNormalisedUsers from "../../../interfaces/TNormalisedUsers";
 
-const LoadedDashboard = () => {
-  return (
-    <div>LoadedDashboard</div>
-  )
+interface IProps {
+  userData: INormalisedData<TNormalisedUsers, number>;
 }
 
-export default LoadedDashboard
+const LoadedDashboard = (props: IProps) => {
+  // Destructure
+  const { userData } = props;
+
+  return <div>LoadedDashboard</div>;
+};
+
+export default LoadedDashboard;

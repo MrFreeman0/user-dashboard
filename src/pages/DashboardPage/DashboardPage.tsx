@@ -12,7 +12,13 @@ const DashboardPage = () => {
       {isLoading ? (
         <LoadingDashboard />
       ) : (
-        <>{error !== undefined ? <ErrorDashboard /> : <LoadedDashboard />}</>
+        <>
+          {error !== undefined ? (
+            <ErrorDashboard />
+          ) : (
+            <LoadedDashboard userData={userData} />
+          )}
+        </>
       )}
     </div>
   );
