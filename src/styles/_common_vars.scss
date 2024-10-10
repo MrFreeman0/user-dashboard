@@ -1,0 +1,44 @@
+// Palette
+$primary: #8c0050;
+$primary-content: #ff8cce;
+$primary-dark: #590033;
+$primary-light: #bf006d;
+
+$secondary: #004b4b;
+$secondary-content: #4bffff;
+$secondary-dark: #001818;
+$secondary-light: #007e7e;
+
+$background: #fafafa;
+$foreground: #fbfbfb;
+$border: #dde2e2;
+
+$copy: #232929;
+$copy-light: #5e6e6e;
+$copy-lighter: #849595;
+
+$success: #004b00;
+$warning: #4b4b00;
+$error: #4b0000;
+$success-content: #4bff4b;
+$warning-content: #ffff4b;
+$error-content: #ff4b4b;
+
+$shadow-light: #00000007;
+$shadow-dark: #00000048;
+$shadow-card: #d9dade;
+
+// Margins and paddings, standardised, pixels
+$extra-small: 1px;
+$small: 2px;
+$normal: 4px;
+$large: 8px;
+$extra-large: 16px;
+$extra-large-x2: 32px;
+
+
+// Common shadows used
+$card-shadow: 2px 2px 4px $shadow-card;
+$card-shadow-hover: 3px 3px 4px $shadow-dark;
+$button-shadow: 1px 1px 3px $shadow-light;
+$button-hover-shadow: 2px 2px 3px $shadow-dark;
