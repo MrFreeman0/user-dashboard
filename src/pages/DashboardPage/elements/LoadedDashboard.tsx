@@ -2,6 +2,7 @@ import INormalisedData from "../../../interfaces/INormsalisedData";
 import TNormalisedUsers from "../../../interfaces/TNormalisedUsers";
 import DashboardHeader from "../../../ui/DashboardHeader/DashboardHeader";
 import GridContainer from "../../../ui/GridContainer/GridContainer";
+import Placeholder from "../../../ui/Placeholder/Placeholder";
 import UserCard from "../../../ui/UserCard/UserCard";
 import useLoadedDashboard from "../hooks/useLoadedDashboard";
 
@@ -31,9 +32,18 @@ const LoadedDashboard = (props: IProps) => {
         sortState={sortState}
       />
       <GridContainer>
-        {filteredAndSortedIds.map((id) => (
-          <UserCard key={id} user={userData.data[id]} />
-        ))}
+        {filteredAndSortedIds.length > 0 ? (
+          filteredAndSortedIds.map((id) => (
+            <UserCard key={id} user={userData.data[id]} />
+          ))
+        ) : (
+          <Placeholder
+            title={"No users found".toUpperCase()}
+            description={
+              "Please make sure that the user you are looking for exists or try to refine your search terms"
+            }
+          />
+        )}
       </GridContainer>
     </div>
   );
