@@ -23,6 +23,13 @@
   border-radius: $rounded-border;
   box-shadow: $card-shadow;
   overflow: hidden;
+  transition: 0.3s;
+  & {
+    margin-bottom: $normal;
+  }
+  &:hover {
+    box-shadow: $card-shadow-hover;
+  }
 }
 
 .user-card-header {
@@ -53,7 +60,6 @@
     font-size: 20px;
   }
 }
-
 
 .description-content {
   font-weight: 400;
@@ -86,7 +92,6 @@
     padding: $normal;
   }
 }
-
 
 .description-label {
   font-weight: 600;
