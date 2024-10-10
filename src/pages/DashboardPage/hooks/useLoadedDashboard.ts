@@ -1,6 +1,10 @@
 import { useState, useMemo } from "react";
 import INormalisedData from "../../../interfaces/INormsalisedData";
-import { ISortState } from "../../../interfaces/ISortInterface";
+import {
+  ISortState,
+  TSortBy,
+  TSortSelection,
+} from "../../../interfaces/ISortInterface";
 import TNormalisedUsers from "../../../interfaces/TNormalisedUsers";
 
 const useLoadedDashboard = (
@@ -13,11 +17,33 @@ const useLoadedDashboard = (
     sortBy: "desc",
   });
 
+  // Data
   const normalisedUsers = useMemo(() => {
     return { ...userData };
   }, [userData]);
-  
-  return {};
+
+  // Helpers
+
+  // State Mutators
+  const handleQueryChange = (query: string) => {
+    setQuery(query);
+  };
+
+  const handleSortSelectionChange = (selection: TSortSelection) => {
+    setSortState((state) => ({ ...state, sortWith: selection }));
+  };
+
+  const handleSortByChange = (selection: TSortBy) => {
+    setSortState((state) => ({ ...state, sortBy: selection }));
+  };
+
+  return {
+    handleQueryChange,
+    handleSortSelectionChange,
+    handleSortByChange,
+    query,
+    sortState,
+  };
 };
 
 export default useLoadedDashboard;
