@@ -9,9 +9,27 @@ const UserCard = (props: IProps) => {
   // Destructure
   const { user } = props;
 
+  const userAddress = `${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}`;
+
   return (
     <div className="user-card-item">
-      <div className="user-card-surface">{user.name}</div>
+      <div className="user-card-surface">
+        {/**Card Header */}
+        <div>
+          <p>{user.name}</p>
+        </div>
+        {/**Card Content */}
+        <div>
+          <p>address</p>
+          <div>{userAddress}</div>
+          <p>email</p>
+          <a>{user.email}</a>
+          <p>phone</p>
+          <div>{user.phone}</div>
+          <p>website</p>
+          <a>{user.website}</a>
+        </div>
+      </div>
     </div>
   );
 };
