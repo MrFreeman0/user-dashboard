@@ -28,11 +28,25 @@ const UserCard = (props: IProps) => {
             {userAddress}
           </div>
           <p className="description-label">email</p>
-          <a className="description-content hoverable-text">{user.email}</a>
+          <a
+            href={`mailto:${user.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="description-content hoverable-text"
+          >
+            {user.email}
+          </a>
           <p className="description-label">phone</p>
           <div className="description-content">{user.phone}</div>
           <p className="description-label">website</p>
-          <a className="description-content hoverable-text">{user.website}</a>
+          <a
+            href={`https://${user.website}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="description-content hoverable-text"
+          >
+            {user.website}
+          </a>
         </div>
       </div>
     </div>
