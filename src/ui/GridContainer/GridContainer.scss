@@ -4,4 +4,18 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: $extra-large;
+
+  @include small-only {
+    padding: $normal;
+  }
+  @include medium-only {
+    padding: $large;
+  }
+  @include large-only {
+    padding: $large;
+  }
+
+  @include extra-large-only {
+    padding: $large;
+  }
 }

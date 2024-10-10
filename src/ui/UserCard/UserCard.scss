@@ -1,5 +1,16 @@
 .user-card-item {
   width: 32%;
+
+  @include medium-only {
+    width: 48%;
+  }
+  @include small-only {
+    width: 100%;
+    margin-right: 0;
+  }
+  & {
+    margin-bottom: $extra-large;
+  }
 }
 
 .user-card-surface {
