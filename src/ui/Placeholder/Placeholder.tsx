@@ -10,9 +10,11 @@ const Placeholder = (props: IProps) => {
   const { title, description } = props;
 
   return (
-    <div>
-      <div>{title}</div>
-      <div>{description}</div>
+    <div className="placeholder-container">
+      <div className="placeholder-surface">
+        <h4>{title}</h4>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };
