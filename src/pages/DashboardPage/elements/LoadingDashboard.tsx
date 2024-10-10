@@ -1,7 +1,11 @@
+import Spinner from "../../../ui/Spinner/Spinner";
+
 const LoadingDashboard = () => {
   return (
-    <div>LoadingDashboard</div>
-  )
-}
+    <div>
+      <Spinner />
+    </div>
+  );
+};
 
-export default LoadingDashboard
+export default LoadingDashboard;
