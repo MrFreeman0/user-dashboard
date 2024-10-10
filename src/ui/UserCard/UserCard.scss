@@ -17,4 +17,34 @@
   height: 100%;
   border-radius: $rounded-border;
   box-shadow: $card-shadow;
+  overflow: hidden;
+}
+
+.user-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: $large;
+  background-color: $secondary;
+  p {
+    font-weight: 400;
+    color: $background;
+  }
+}
+
+.avatar-container {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  background-color: $background;
+  b {
+    -webkit-user-select: none;
+    line-height: 36px;
+    user-select: none;
+    pointer-events: none;
+    color: $primary-light;
+    text-align: center;
+    font-size: 20px;
+  }
 }

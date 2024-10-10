@@ -15,8 +15,11 @@ const UserCard = (props: IProps) => {
     <div className="user-card-item">
       <div className="user-card-surface">
         {/**Card Header */}
-        <div>
+        <div className="user-card-header">
           <p>{user.name}</p>
+          <div className="avatar-container">
+            <b>{user.name[0] ?? "?"}</b>
+          </div>
         </div>
         {/**Card Content */}
         <div>
