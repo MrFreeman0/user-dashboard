@@ -1,5 +1,4 @@
 import INormalisedData from "../../../interfaces/INormsalisedData";
-import { TSortSelection, TSortBy } from "../../../interfaces/ISortInterface";
 import TNormalisedUsers from "../../../interfaces/TNormalisedUsers";
 import DashboardHeader from "../../../ui/DashboardHeader/DashboardHeader";
 import GridContainer from "../../../ui/GridContainer/GridContainer";
