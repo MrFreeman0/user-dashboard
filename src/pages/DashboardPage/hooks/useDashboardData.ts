@@ -7,7 +7,11 @@ import IUser from "../../../interfaces/IUser";
 
 const useDashboardData = () => {
   // Hooks
-  const { data, error, isLoading, isValidating, mutate, } = useSWR("/users", axiosFetcher);
+  const { data, error, isLoading, isValidating, mutate } = useSWR(
+    "/users",
+    axiosFetcher,
+    { revalidateOnFocus: false }
+  );
 
   // State
   const [normalisedUsers, setNormalisedUsers] = useState<
