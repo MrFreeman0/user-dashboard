@@ -22,3 +22,10 @@
   height: 36px;
   align-items: center;
 }
+
+.header-button {
+  height: 100%;
+}
+.header-button:not(:last-child) {
+  margin-right: $large;
+}

@@ -50,13 +50,14 @@ const DashboardHeader = (props: IProps) => {
       />
       <div className="header-button-container">
         <StyledSelect
+          className="header-button"
           value={sortState.sortWith}
           onChange={handleSortSelectionChange}
         >
           <option value={"name"}>Username</option>
           <option value={"email"}>Email</option>
         </StyledSelect>
-        <StyledSelect value={sortState.sortBy} onChange={handleSortByChange}>
+        <StyledSelect className="header-button" value={sortState.sortBy} onChange={handleSortByChange}>
           <option value={"asc"}>Ascending</option>
           <option value={"desc"}>Descending</option>
         </StyledSelect>
