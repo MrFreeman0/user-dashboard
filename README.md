@@ -4,7 +4,7 @@ A simple project to showcase how a responsive user dashboard with minimal 3rd-pa
 
 ## Running
 
-This project was set up with Vite. To run, do `npm run dev`
+This project was set up with Vite. To run, do `npm i`, then `npm run dev`
 
 ## Structure
 - `src`

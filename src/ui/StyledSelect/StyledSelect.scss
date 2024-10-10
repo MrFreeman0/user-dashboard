@@ -1,0 +1,22 @@
+.styled-select {
+  border-radius: 4px;
+  box-sizing: content-box;
+  border: 1px solid;
+  border-color: $secondary-light;
+  cursor: pointer;
+
+  transition: 0.3s;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 1px $secondary-light;
+    border-color: $secondary-light;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $secondary-light;
+    }
+  }
+
+  &:hover {
+    box-shadow: $button-hover-shadow;
+  }
+}

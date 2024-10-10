@@ -1,0 +1,24 @@
+.placeholder-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.placeholder-surface {
+  flex-grow: 1;
+  border-radius: $rounded-border;
+  overflow: hidden;
+  padding: $extra-large;
+  box-shadow: $card-shadow;
+  p {
+    color: $copy-lighter;
+  }
+
+  h4 {
+    font-weight: 600;
+    color: $copy-light;
+  }
+}
