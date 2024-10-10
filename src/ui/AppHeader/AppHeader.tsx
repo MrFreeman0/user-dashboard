@@ -5,7 +5,7 @@ const AppHeader: React.FC<React.HTMLAttributes<HTMLElement>> = (props) => {
   const { children, className, ...rest } = props;
 
   return (
-    <header className={`${className ?? ""} `} {...rest}>
+    <header className={`${className ?? ""} app-header`} {...rest}>
       {children}
     </header>
   );

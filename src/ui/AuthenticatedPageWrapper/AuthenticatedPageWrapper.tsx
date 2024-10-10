@@ -1,16 +1,22 @@
-import './AuthenticatedPageWrapper.scss'
+import AppHeader from "../AppHeader/AppHeader";
+import "./AuthenticatedPageWrapper.scss";
 
 interface IProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const AuthenticatedPageWrapper = (props: IProps) => {
   //Destructure
-  const {children} = props;
+  const { children } = props;
 
   return (
-    <div>{children}</div>
-  )
-}
+    <div className="page-wrapper">
+      <AppHeader>
+        <h3 className="app-title">User Management Platform</h3>
+      </AppHeader>
+      {children}
+    </div>
+  );
+};
 
-export default AuthenticatedPageWrapper
+export default AuthenticatedPageWrapper;
