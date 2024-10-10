@@ -13,7 +13,7 @@ const UserCard = (props: IProps) => {
 
   return (
     <div className="user-card-item">
-      <div className="user-card-surface">
+      <div className="user-card-surface flex-column">
         {/**Card Header */}
         <div className="user-card-header">
           <p>{user.name}</p>
@@ -22,15 +22,17 @@ const UserCard = (props: IProps) => {
           </div>
         </div>
         {/**Card Content */}
-        <div>
-          <p>address</p>
-          <div>{userAddress}</div>
-          <p>email</p>
-          <a>{user.email}</a>
-          <p>phone</p>
-          <div>{user.phone}</div>
-          <p>website</p>
-          <a>{user.website}</a>
+        <div className="flex-column description-container">
+          <p className="description-label">address</p>
+          <div className="fill-remaining description-content">
+            {userAddress}
+          </div>
+          <p className="description-label">email</p>
+          <a className="description-content hoverable-text">{user.email}</a>
+          <p className="description-label">phone</p>
+          <div className="description-content">{user.phone}</div>
+          <p className="description-label">website</p>
+          <a className="description-content hoverable-text">{user.website}</a>
         </div>
       </div>
     </div>
