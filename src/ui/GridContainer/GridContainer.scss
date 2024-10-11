@@ -1,9 +1,10 @@
 .grid-flex-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-top: $extra-large;
+  gap: 2%;
 
   @include small-only {
     padding: $normal;
@@ -18,4 +19,6 @@
   @include extra-large-only {
     padding: $large;
   }
+
+  
 }
