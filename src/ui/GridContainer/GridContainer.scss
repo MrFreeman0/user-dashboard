@@ -11,6 +11,8 @@
   }
   @include medium-only {
     padding: $large;
+    gap: 4%;
+
   }
   @include large-only {
     padding: $large;
