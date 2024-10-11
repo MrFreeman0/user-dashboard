@@ -16,6 +16,12 @@
   & {
     margin-bottom: $extra-large;
   }
+  &:last-child {
+    margin-right: 34%;
+    @include medium-only {
+      margin-right: 0;
+    }
+  }
 }
 
 .user-card-surface {
